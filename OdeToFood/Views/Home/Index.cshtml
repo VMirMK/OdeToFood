@@ -1,4 +1,5 @@
-﻿@{
+﻿@model OdeToFood.Models.RestaurantReview
+@{
     ViewBag.Title = "Home Page";
 }
 
@@ -7,6 +8,6 @@
     To learn more about ASP.NET MVC visit <a href="http://asp.net/mvc" title="ASP.NET MVC Website">http://asp.net/mvc</a>.
 </p>
 <div>
-@Model.Name
-                                @Model.Rating
+    Restaurant: @Model.Name
+    Rating: @Model.Rating
 </div>

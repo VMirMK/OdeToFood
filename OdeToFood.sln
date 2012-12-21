@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OdeToFood", "OdeToFood\OdeToFood.csproj", "{4A15CF89-3B65-4B2A-AD12-5ADACC8E5082}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OdeToFood.Tests", "OdeToFood.Tests\OdeToFood.Tests.csproj", "{94CEB2B9-B24C-42E3-A993-4D294E028ECF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{4A15CF89-3B65-4B2A-AD12-5ADACC8E5082}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A15CF89-3B65-4B2A-AD12-5ADACC8E5082}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A15CF89-3B65-4B2A-AD12-5ADACC8E5082}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94CEB2B9-B24C-42E3-A993-4D294E028ECF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94CEB2B9-B24C-42E3-A993-4D294E028ECF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94CEB2B9-B24C-42E3-A993-4D294E028ECF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94CEB2B9-B24C-42E3-A993-4D294E028ECF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
