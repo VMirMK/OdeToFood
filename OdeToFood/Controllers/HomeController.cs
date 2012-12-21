@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using OdeToFood.Models;
 
 namespace OdeToFood.Controllers
 {
@@ -12,7 +13,13 @@ namespace OdeToFood.Controllers
         {
             ViewBag.Message = "Welcome to ASP.NET MVC!";
 
-            return View();
+            var model = new RestaurantReview
+                            {
+                                Name = "Gurmet",
+                                Rating = 10
+                            };
+
+            return View(model);
         }
 
         public ActionResult About()
