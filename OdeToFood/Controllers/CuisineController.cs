@@ -18,7 +18,7 @@ namespace OdeToFood.Controllers
         /// <returns></returns>
         [HttpGet]
         //[Authorize]
-            [Log]
+            //[Log]
         public ActionResult Search(string name="*")
         {
             throw new Exception("kablaaaam!");
