@@ -241,6 +241,12 @@ table th {
     color: Red;
 }
 
+.review {
+    border-style: dashed;
+    border-top-color: #ff4b82;
+    background: lightblue
+}
+
 nav, 
 #menucontainer {
     margin-top: 40px;

@@ -2,17 +2,36 @@
 
 @{
     ViewBag.Title = "Index";
+    var first = Model.First();
 }
 
-<h2>Index</h2>
+<h2>The latest reviews</h2>
+
+@first.Name
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table>
+
+@foreach (var item in Model)
+{
+    <text>Review</text>
+    @:Review
+    <div class="review">
+        <h4>@item.Name</h4>
+        <span>Rating: @item.Rating</span>
+        <p>
+            @item.Body
+        </p>
+    </div>
+}
+@*<table>
     <tr>
         <th>
             Name
+        </th>
+        <th>
+            Body
         </th>
         <th>
             Rating
@@ -23,10 +42,20 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.Name)
+             @item.Name
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Rating)
+            @item.Body
+            @Html.Raw(item.Body)
+        </td>
+        <td>
+            @item.Rating /10
+            @(item.Rating /10.0)
+            k@(item.Rating /10.0)
+            @@OdeToFood
+        </td>
+        <td>
+            @String.Format("{0:g}", item.Created)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
@@ -36,4 +65,4 @@
     </tr>
 }
 
-</table>
+</table>*@
