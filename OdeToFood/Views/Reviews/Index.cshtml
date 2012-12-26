@@ -3,6 +3,7 @@
 @{
     ViewBag.Title = "Index";
     var first = Model.First();
+    //Layout = "~/Views/Shared/_Layout2.cshtml";
 }
 
 <h2>The latest reviews</h2>
@@ -24,6 +25,9 @@
             @item.Body
         </p>
     </div>
+}
+@section footer{
+<p>footer</p>
 }
 @*<table>
     <tr>
