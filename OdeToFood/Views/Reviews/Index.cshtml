@@ -23,6 +23,9 @@
         <span>Rating: @item.Rating</span>
         <p>
             @item.Body
+            <span class="right">
+                @Html.ActionLink("Edit","Edit",new {id = item.ID})
+            </span>
         </p>
     </div>
 }

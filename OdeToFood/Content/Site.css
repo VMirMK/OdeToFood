@@ -247,6 +247,10 @@ table th {
     background: lightblue
 }
 
+.right 
+{
+    float: right
+}
 nav, 
 #menucontainer {
     margin-top: 40px;
