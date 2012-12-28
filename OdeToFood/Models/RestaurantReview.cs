@@ -10,6 +10,7 @@ namespace OdeToFood.Models
         public int ID { get; set; }
         public string Name { get; set; }
         public string Body { get; set; }
+        public string ImageUrl { get; set; }
         public int Rating { get; set; }
         public DateTime Created { get; set; }
     }

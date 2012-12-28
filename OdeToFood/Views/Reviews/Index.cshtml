@@ -1,4 +1,5 @@
-﻿@model IEnumerable<OdeToFood.Models.RestaurantReview>
+﻿@*@using OdeToFood.Infrastructure*@
+@model IEnumerable<OdeToFood.Models.RestaurantReview>
 
 @{
     ViewBag.Title = "Index";
@@ -20,6 +21,8 @@
     @:Review
     <div class="review">
         <h4>@item.Name</h4>
+        @*<img src="@item.ImageUrl" alt="@item.Name"/>*@
+        @Html.Image(item.ImageUrl, item.Name)
         <span>Rating: @item.Rating</span>
         <p>
             @item.Body

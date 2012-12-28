@@ -70,12 +70,29 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\LogAttribute.cs" />
+    <Compile Include="Infrastructure\MyHelpers.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\FoodDb.cs" />
     <Compile Include="Models\RestaurantReview.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\images\Add-icon.png" />
+    <Content Include="Content\images\button-cancel.png" />
+    <Content Include="Content\images\Check-icon.png" />
+    <Content Include="Content\images\close-button.png" />
+    <Content Include="Content\images\contentbg.gif" />
+    <Content Include="Content\images\grd_alt.png" />
+    <Content Include="Content\images\grd_head.png" />
+    <Content Include="Content\images\grd_pgr.png" />
+    <Content Include="Content\images\login-btn.png" />
+    <Content Include="Content\images\Next.png" />
+    <Content Include="Content\images\Previous.png" />
+    <Content Include="Content\images\print_printer.png" />
+    <Content Include="Content\images\Tulliana Icon 05.png" />
+    <Content Include="Content\images\Tulliana Icon 09.png" />
+    <Content Include="Content\images\Tulliana Icon 43.png" />
+    <Content Include="Content\images\txt2.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -146,7 +163,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\images\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
