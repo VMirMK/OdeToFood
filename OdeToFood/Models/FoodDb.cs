@@ -48,5 +48,9 @@ namespace OdeToFood.Models
             set { _reviews = value; }
         }
 
+        //public static RestaurantReview FindTheBest(this List<RestaurantReview> db)
+        //{
+        //    return _reviews.First();
+        //}
     }
 }

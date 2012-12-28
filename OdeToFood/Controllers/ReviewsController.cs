@@ -19,6 +19,13 @@ namespace OdeToFood.Controllers
             return View(model);
         }
 
+        [ChildActionOnly] //so it canot be accessed through /Reviews/BestReview
+        public ActionResult BestReview()
+        {
+            var model = _db.Reviews.LastOrDefault();
+            return PartialView("_Reviews", model);
+        }
+
         //
         // GET: /Reviews/Details/5
 

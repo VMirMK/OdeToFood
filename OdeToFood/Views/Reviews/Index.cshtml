@@ -19,19 +19,9 @@
 {
     <text>Review</text>
     @:Review
-    <div class="review">
-        <h4>@item.Name</h4>
-        @*<img src="@item.ImageUrl" alt="@item.Name"/>*@
-        @Html.Image(item.ImageUrl, item.Name)
-        <span>Rating: @item.Rating</span>
-        <p>
-            @item.Body
-            <span class="right">
-                @Html.ActionLink("Edit","Edit",new {id = item.ID})
-            </span>
-        </p>
-    </div>
+    @Html.Partial("_Reviews",item)
 }
+
 @section footer{
 <p>footer</p>
 }

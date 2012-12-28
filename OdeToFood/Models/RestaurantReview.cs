@@ -13,5 +13,10 @@ namespace OdeToFood.Models
         public string ImageUrl { get; set; }
         public int Rating { get; set; }
         public DateTime Created { get; set; }
+
+        public RestaurantReview FindTheBest()
+        {
+            return this;
+        }
     }
 }
