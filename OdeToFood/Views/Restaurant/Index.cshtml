@@ -6,6 +6,11 @@
 
 <h2>Index</h2>
 
+@using (Html.BeginForm("Index","Restaurant",FormMethod.Get))
+{
+    @Html.DropDownList("Country", new SelectList(ViewBag.Countries))
+    <input type="submit" value="Filter"/>
+    }
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
@@ -37,3 +42,5 @@
 }
 
 </table>
+
+@Html.ActionLink("Show restaurants in Macedonia", "Index", "Restaurant", new { country = "Macedonia" }, null)

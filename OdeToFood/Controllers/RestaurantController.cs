@@ -14,9 +14,13 @@ namespace OdeToFood.Controllers
 
         OdeToFoodDB _db = new OdeToFoodDB();
 
-        public ActionResult Index()
+        public ActionResult Index(string country)
         {
-            var model = _db.Restaurants;
+            ViewBag.Countries = _db.Restaurants.Select(r => r.Adress.Country).Distinct();
+            var model = from r in _db.Restaurants
+                        orderby r.Name
+                        where r.Adress.Country.Contains(country) || country ==null
+                        select r;
             return View(model);
         }
 
