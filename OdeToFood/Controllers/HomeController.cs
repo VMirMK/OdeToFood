@@ -14,9 +14,9 @@ namespace OdeToFood.Controllers
             ViewBag.Message = string.Format("{0} {1} {2} ", RouteData.Values["controller"], RouteData.Values["action"],
                                             RouteData.Values["id"]);
 
-            var model = new RestaurantReview
+            var model = new Review
                             {
-                                Name = "Gurmet",
+                                //Name = "Gurmet",
                                 Rating = 10
                             };
 

@@ -10,7 +10,7 @@ namespace OdeToFood.Models
     {
         public DbSet<Restaurant> Restaurants { get; set; }
 
-        public DbSet<RestaurantReview> Reviews { get; set; }
+        public DbSet<Review> Reviews { get; set; }
         //static OdeToFood()
         //{
         //    _reviews = new List<RestaurantReview>();

@@ -15,7 +15,7 @@
             Name
         </th>
         <th>
-            qAdress
+            Adress
         </th>
         <th></th>
     </tr>
@@ -26,7 +26,7 @@
             @Html.DisplayFor(modelItem => item.Name)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.qAdress)
+            @item.Adress.Street, @item.Adress.City, @item.Adress.State, @item.Adress.Country
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |

@@ -74,6 +74,7 @@
     <Compile Include="Infrastructure\LogAttribute.cs" />
     <Compile Include="Infrastructure\MyHelpers.cs" />
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\Adress.cs" />
     <Compile Include="Models\OdeToFoodDB.cs" />
     <Compile Include="Models\Restaurant.cs" />
     <Compile Include="Models\RestaurantReview.cs" />
