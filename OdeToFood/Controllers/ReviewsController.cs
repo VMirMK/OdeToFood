@@ -9,7 +9,7 @@ namespace OdeToFood.Controllers
 {
     public class ReviewsController : Controller
     {
-        FoodDb _db = new FoodDb();
+        OdeToFoodDB _db = new OdeToFoodDB();
         //
         // GET: /Reviews/
 
