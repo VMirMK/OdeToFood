@@ -22,7 +22,7 @@ namespace OdeToFood.Controllers
         [ChildActionOnly] //so it canot be accessed through /Reviews/BestReview
         public ActionResult BestReview()
         {
-            var model = _db.Reviews.LastOrDefault();
+            var model = _db.Reviews.FirstOrDefault();
             return PartialView("_Reviews", model);
         }
 
@@ -39,18 +39,21 @@ namespace OdeToFood.Controllers
 
         public ActionResult Create()
         {
-            return View();
+            return View(new Review());
         } 
 
         //
         // POST: /Reviews/Create
 
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(int restaurantID, Review newReview)
         {
             try
             {
                 // TODO: Add insert logic here
+                var restaurant = _db.Restaurants.Single(r => r.ID == restaurantID);
+                restaurant.Reviews.Add(newReview); 
+                _db.SaveChanges();
 
                 return RedirectToAction("Index");
             }

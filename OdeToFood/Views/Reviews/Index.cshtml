@@ -9,7 +9,7 @@
 
 <h2>The latest reviews</h2>
 
-@first.Restaurant.Name
+@*@first.Restaurant.Name*@
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -17,7 +17,7 @@
 
 @foreach (var item in Model)
 {
-    <text>Review</text>
+    @*<text>Review</text>*@
     @:Review
     @Html.Partial("_Reviews",item)
 }

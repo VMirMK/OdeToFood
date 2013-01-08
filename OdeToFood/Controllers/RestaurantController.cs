@@ -24,5 +24,10 @@ namespace OdeToFood.Controllers
             return View(model);
         }
 
+        public ActionResult Details(int id)
+        {
+            var model = _db.Restaurants.Single(r => r.ID == id);
+            return View(model);
+        }
     }
 }
