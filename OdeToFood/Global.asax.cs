@@ -48,6 +48,8 @@ namespace OdeToFood
 
             RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);
+            Database.SetInitializer<OdeToFoodDB>(null);
+            //The model backing the context has changed since the database was created, EF4.3/5.0
         }
     }
 
