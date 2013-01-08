@@ -7,10 +7,12 @@ namespace OdeToFood.Models
 {
     public class Restaurant
     {
-        public int ID { get; set; }
-        public string Name { get; set; }
-        public string ChefsName { get; set; }
-        public Adress Adress { get; set; }
+        //virtual for enabling Lazy Loading and more efficient change tracking mechanism
+        public virtual int ID { get; set; }
+        public virtual string Name { get; set; }
+        public virtual string ChefsName { get; set; }
+        public virtual Adress Adress { get; set; }
+        public virtual ICollection<Review> Reviews { get; set; }
         //public string StreetAdress { get; set; }
         //public string City { get; set; }
         //public string State { get; set; }

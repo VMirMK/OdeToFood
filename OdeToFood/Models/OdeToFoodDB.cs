@@ -56,5 +56,17 @@ namespace OdeToFood.Models
         //{
         //    return _reviews.First();
         //}
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            //modelBuilder.Entity<Restaurant>().Property(r => r.ID).HasColumnName("restaurant_ID");
+            //mapping of Property ID in the Entity Restaurant with the ColumnName restaurant_ID
+
+            //modelBuilder.Entity<Restaurant>().HasMany(r => r.Reviews).WithRequired(rv => rv.Restaurant);
+            //modelBuilder.Entity<Restaurant>().ToTable("tb_Reviews");
+
+            base.OnModelCreating(modelBuilder);
+
+        }
     }
 }

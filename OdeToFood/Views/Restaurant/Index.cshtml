@@ -6,11 +6,11 @@
 
 <h2>Index</h2>
 
-@using (Html.BeginForm("Index","Restaurant",FormMethod.Get))
+@*@using (Html.BeginForm("Index","Restaurant",FormMethod.Get))
 {
     @Html.DropDownList("Country", new SelectList(ViewBag.Countries))
     <input type="submit" value="Filter"/>
-    }
+    }*@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
@@ -22,25 +22,25 @@
         <th>
             Adress
         </th>
-        <th></th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.Name)
+
+            @Html.ActionLink( item.Name, "Details", "Restaurant", new { id=item.ID }, null )
         </td>
         <td>
             @item.Adress.Street, @item.Adress.City, @item.Adress.State, @item.Adress.Country
         </td>
-        <td>
+        @*<td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
             @Html.ActionLink("Details", "Details", new { id=item.ID }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.ID })
-        </td>
+        </td>*@
     </tr>
 }
 
 </table>
 
-@Html.ActionLink("Show restaurants in Macedonia", "Index", "Restaurant", new { country = "Macedonia" }, null)
+@*@Html.ActionLink("Show restaurants in Macedonia", "Index", "Restaurant", new { country = "Macedonia" }, null)*@

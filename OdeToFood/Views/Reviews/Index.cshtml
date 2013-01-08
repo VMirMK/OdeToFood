@@ -1,5 +1,5 @@
 ﻿@*@using OdeToFood.Infrastructure*@
-@model IEnumerable<OdeToFood.Models.RestaurantReview>
+@model IEnumerable<OdeToFood.Models.Review>
 
 @{
     ViewBag.Title = "Index";
@@ -9,7 +9,7 @@
 
 <h2>The latest reviews</h2>
 
-@first.Name
+@first.Restaurant.Name
 
 <p>
     @Html.ActionLink("Create New", "Create")
