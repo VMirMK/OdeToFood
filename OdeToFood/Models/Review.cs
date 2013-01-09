@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel;
 
 namespace OdeToFood.Models
 {
@@ -10,10 +11,17 @@ namespace OdeToFood.Models
     {
         public virtual int ID { get; set; }
         public virtual Restaurant Restaurant { get; set; }
+
         [Required]
+        [DataType(DataType.MultilineText)]
         public virtual string Body { get; set; }
+
         [Range(1,10)]
         public virtual int Rating { get; set; }
+
+        [DisplayName("Dining date")]
+        //[DisplayFormat(DataFormatString = "{0:d}", ApplyFormatInEditMode = true)]
+        [DataType(DataType.Date)]
         public virtual DateTime Created { get; set; }
 
         //public RestaurantReview FindTheBest()
