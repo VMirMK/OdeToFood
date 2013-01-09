@@ -2,14 +2,24 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Threading;
 using System.Web.Mvc;
 using OdeToFood.Models;
+using OdeToFood.Queries;
 
 namespace OdeToFood.Controllers
 {
     public class HomeController : Controller
     {
         OdeToFoodDB _db = new OdeToFoodDB();
+
+        public PartialViewResult LatestReview()
+        {
+            Thread.Sleep(800);
+            var review = _db.Reviews.FindTheLatest(1).Single();
+            return PartialView("_Review", review);
+        }
+
         public ActionResult Index()
         {
             ViewBag.Message = string.Format("{0} {1} {2} ", RouteData.Values["controller"], RouteData.Values["action"],

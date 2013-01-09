@@ -23,7 +23,7 @@ namespace OdeToFood.Controllers
         public ActionResult BestReview()
         {
             var model = _db.Reviews.FirstOrDefault();
-            return PartialView("_Reviews", model);
+            return PartialView("_Review", model);
         }
 
         //

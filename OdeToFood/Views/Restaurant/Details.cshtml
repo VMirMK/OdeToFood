@@ -28,7 +28,7 @@
 
 @foreach (var r in Model.Reviews)
 { 
-    @Html.Partial("_Reviews", r)
+    @Html.Partial("_Review", r)
 }
 
 @Html.ActionLink("Create a new review", "Create", "Reviews", new { restaurantID = Model.ID }, null)
