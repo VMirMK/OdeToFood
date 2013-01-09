@@ -79,8 +79,11 @@ namespace OdeToFood.Controllers
         public ActionResult Edit(int id, FormCollection collection)
         {
             var review = _db.Reviews.First(r => r.ID == id);
-            if (TryUpdateModel(review)) 
+            if (TryUpdateModel(review))
+            {
+                _db.SaveChanges();
                 return RedirectToAction("Index");
+            }
             return View(review);
         }
 
