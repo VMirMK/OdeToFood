@@ -3,7 +3,8 @@
     ViewBag.Title = "Home Page";
 }
 
-<h2>@ViewBag.Message</h2>
+<h2>@ViewBag.Message
+User.Identity.Name: @User.Identity.Name</h2>
 
 <div id="latestReview">
     @Ajax.ActionLink("Click here to see the latest review", 

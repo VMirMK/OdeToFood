@@ -47,6 +47,7 @@ namespace OdeToFood.Controllers
             return Json(restaurants, JsonRequestBehavior.AllowGet);
         }
 
+        [Authorize]
         public ActionResult Index()
         {
             ViewBag.Message = string.Format("{0} {1} {2} ", RouteData.Values["controller"], RouteData.Values["action"],
