@@ -16,23 +16,53 @@
 </div>
 <br />
 
-@using (Ajax.BeginForm ("Search", "Home",
+@*@using (Ajax.BeginForm ("Search", "Home",
                      new AjaxOptions {
                          UpdateTargetId = "searchResults", 
                          InsertionMode = InsertionMode.Replace,
                          HttpMethod = "GET",
                          LoadingElementId = "progress"
                      }))
-{
+{*@
     @*<input type="text" name="q" class="autocomplete"/> *@
-    <input type="text" name="q" data-autocomplete="@Url.Action("QuickSearch","Home")"/>
+    @*<input type="text" name="q" data-autocomplete="@Url.Action("QuickSearch","Home")"/>
     <input type="submit" value="search" />
 }
 <br />
 
 <table id="searchResults">
 
+</table>*@
+
+<form method="get" action="@Url.Action("JsonSearch","Home")" id="searchForm">
+    <input type="text" name="q" data-autocomplete="@Url.Action("QuickSearch","Home")"/>
+    <input type="submit" value="search" />
+</form>
+
+<table>
+    <thead>
+        <th>
+            Name
+        </th>
+        <th>
+            Address
+        </th>
+    </thead>
+    <tbody id="searchResults">
+
+    </tbody>
 </table>
+
+<script id="searchTemplate" type="text/x-jquery-tmpl">
+    <tr>
+        <td>
+            ${Name}
+        </td>
+        <td>
+            ${City}, ${Country}
+        </td>
+    </tr>
+</script>
 
 <div id="progress">
   <img src="@Url.Content("~/Content/images/ajax-loader.gif")" alt="loader">

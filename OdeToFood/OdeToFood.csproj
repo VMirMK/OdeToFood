@@ -164,6 +164,8 @@
     <Content Include="Scripts\jquery-ui-1.8.11.min.js" />
     <Content Include="Scripts\jquery-ui-1.8.24.js" />
     <Content Include="Scripts\jquery-ui-1.8.24.min.js" />
+    <Content Include="Scripts\jQuery.tmpl.js" />
+    <Content Include="Scripts\jQuery.tmpl.min.js" />
     <Content Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
