@@ -14,6 +14,24 @@
                          HttpMethod = "GET",LoadingElementId="progress"
                      })
 </div>
+<br />
+
+@using (Ajax.BeginForm ("Search", "Home",
+                     new AjaxOptions {
+                         UpdateTargetId = "searchResults", 
+                         InsertionMode = InsertionMode.Replace,
+                         HttpMethod = "GET",
+                         LoadingElementId = "progress"
+                     }))
+{
+    <input type="text" name="q"/>
+    <input type="submit" value="search" />
+}
+<br />
+
+<table id="searchResults">
+
+</table>
 
 <div id="progress">
   <img src="@Url.Content("~/Content/images/ajax-loader.gif")" alt="loader">

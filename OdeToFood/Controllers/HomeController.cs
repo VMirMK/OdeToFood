@@ -20,6 +20,13 @@ namespace OdeToFood.Controllers
             return PartialView("_Review", review);
         }
 
+        public PartialViewResult Search(string q)
+        {
+            Thread.Sleep(200);
+            var restaurants = _db.Restaurants.Where(r => String.IsNullOrEmpty(q) || r.Name.Contains(q)).Take(10);
+            return PartialView("_RestaurantSearchResults", restaurants);
+        }
+
         public ActionResult Index()
         {
             ViewBag.Message = string.Format("{0} {1} {2} ", RouteData.Values["controller"], RouteData.Values["action"],
