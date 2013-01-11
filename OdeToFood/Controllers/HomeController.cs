@@ -27,6 +27,16 @@ namespace OdeToFood.Controllers
             return PartialView("_RestaurantSearchResults", restaurants);
         }
 
+        public ActionResult QuickSearch(string term)
+        {
+            //autocomplete will send term parameter in the request
+            var restaurants = _db.Restaurants
+                .Where(r => String.IsNullOrEmpty(term) || r.Name.Contains(term)).Take(10)
+                .Select(r => new { label = r.Name });
+            //working wit autocomplete requires Json objects that have label property
+            return Json(restaurants, JsonRequestBehavior.AllowGet);
+        }
+
         public ActionResult Index()
         {
             ViewBag.Message = string.Format("{0} {1} {2} ", RouteData.Values["controller"], RouteData.Values["action"],

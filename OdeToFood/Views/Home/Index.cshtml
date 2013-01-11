@@ -24,7 +24,8 @@
                          LoadingElementId = "progress"
                      }))
 {
-    <input type="text" name="q"/>
+    @*<input type="text" name="q" class="autocomplete"/> *@
+    <input type="text" name="q" data-autocomplete="@Url.Action("QuickSearch","Home")"/>
     <input type="submit" value="search" />
 }
 <br />
