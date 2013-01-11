@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using OdeToFood.Models;
+using OdeToFood.Queries;
 
 namespace OdeToFood.Controllers
 {
@@ -22,7 +23,7 @@ namespace OdeToFood.Controllers
         [ChildActionOnly] //so it canot be accessed through /Reviews/BestReview
         public ActionResult BestReview()
         {
-            var model = _db.Reviews.FirstOrDefault();
+            var model = _db.Reviews.FindTheBest();
             return PartialView("_Review", model);
         }
 
